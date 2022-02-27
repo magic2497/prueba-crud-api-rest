@@ -1,5 +1,5 @@
 const URL_ENDPOINT =
-    "http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api";
+    "http://mpayeras.randion.es/prueba-crud-api-rest/public/api";
 let CONTACTS;
 
 let contact = {
@@ -48,7 +48,7 @@ const renderContact = (contact) => {
 
 function deleteContact(id) {
     fetch(
-        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${id}`,
+        `http://mpayeras.randion.es/prueba-crud-api-rest/public/api/contacts/${id}`,
         {
             method: "DELETE",
         }
@@ -57,7 +57,7 @@ function deleteContact(id) {
 
 function showContact(id) {
     fetch(
-        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${id}`
+        `http://mpayeras.randion.es/prueba-crud-api-rest/public/api/contacts/${id}`
     )
         .then((res) => res.json())
         .then((data) => {
@@ -67,7 +67,7 @@ function showContact(id) {
 
 function createContact(contact) {
     fetch(
-        "http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts",
+        "http://mpayeras.randion.es/prueba-crud-api-rest/public/api/contacts",
         {
             method: "POST",
             headers: {
@@ -115,7 +115,7 @@ function renderFormCreate() {
 
 function editContact(contact) {
     fetch(
-        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${contact.id}`,
+        `http://mpayeras.randion.es/prueba-crud-api-rest/public/api/contacts/${contact.id}`,
         {
             method: "PUT",
             headers: {
@@ -143,7 +143,7 @@ function editContactSubmit(id) {
 
 function valuesContacts(id) {
     fetch(
-        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${id}`
+        `http://mpayeras.randion.es/prueba-crud-api-rest/public/api/contacts/${id}`
     )
         .then((res) => res.json())
         .then((data) => {
