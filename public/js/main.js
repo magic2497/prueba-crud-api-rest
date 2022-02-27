@@ -1,4 +1,5 @@
-const URL_ENDPOINT = "http://localhost:8000/api";
+const URL_ENDPOINT =
+    "http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api";
 let CONTACTS;
 
 let contact = {
@@ -46,13 +47,18 @@ const renderContact = (contact) => {
 };
 
 function deleteContact(id) {
-    fetch(`http://localhost:8000/api/contacts/${id}`, {
-        method: "DELETE",
-    });
+    fetch(
+        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${id}`,
+        {
+            method: "DELETE",
+        }
+    );
 }
 
 function showContact(id) {
-    fetch(`http://localhost:8000/api/contacts/${id}`)
+    fetch(
+        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${id}`
+    )
         .then((res) => res.json())
         .then((data) => {
             renderContact(data);
@@ -60,13 +66,16 @@ function showContact(id) {
 }
 
 function createContact(contact) {
-    fetch("http://localhost:8000/api/contacts", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contact),
-    });
+    fetch(
+        "http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts",
+        {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(contact),
+        }
+    );
 }
 
 function createContactSubmit() {
@@ -105,13 +114,16 @@ function renderFormCreate() {
 }
 
 function editContact(contact) {
-    fetch(`http://localhost:8000/api/contacts/${contact.id}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contact),
-    });
+    fetch(
+        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${contact.id}`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(contact),
+        }
+    );
 }
 
 function editContactSubmit(id) {
@@ -130,7 +142,9 @@ function editContactSubmit(id) {
 }
 
 function valuesContacts(id) {
-    fetch(`http://localhost:8000/api/contacts/${id}`)
+    fetch(
+        `http://mpayeras.randion.es/projects/prueba-crud-api-rest/public/api/contacts/${id}`
+    )
         .then((res) => res.json())
         .then((data) => {
             renderFormEdit(data, id);
